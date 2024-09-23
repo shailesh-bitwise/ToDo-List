@@ -1,0 +1,18 @@
+Screen:
+    MDBoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        MDTopAppBar:
+            title: "Todo list"
+            id: app_bar
+            left_action_items: [["menu", lambda x: app.show_exit_dialog()]]
+
+        MDScrollView:
+            MDList:
+                id: todo_list
+
+    MDFloatingActionButton:
+        icon: "pen"
+        pos_hint: {'x': 0.9, 'y': 0.05}
+        on_press: app.show_dialog()
